@@ -29,28 +29,28 @@ export function Layout() {
               to="/"
               end
               className={({ isActive }) =>
-                `px-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-action)] rounded ${isActive ? "text-[var(--color-action)] font-medium" : "text-[var(--color-text-secondary)] hover:text-[var(--color-action)] hover:underline"}`
+                `w-[70px] text-center focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-action)] rounded ${isActive ? "text-[var(--color-action)] font-medium" : "text-[var(--color-text-secondary)] hover:text-[var(--color-action)] hover:underline"}`
               }
             >
               Portfolio
             </NavLink>
             <span className="w-px h-4 bg-[var(--color-border)] mx-3" />
             <NavLink
-              to="/cv"
-              className={({ isActive }) =>
-                `px-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-action)] rounded ${isActive ? "text-[var(--color-action)] font-medium" : "text-[var(--color-text-secondary)] hover:text-[var(--color-action)] hover:underline"}`
-              }
-            >
-              CV
-            </NavLink>
-            <span className="w-px h-4 bg-[var(--color-border)] mx-3" />
-            <NavLink
               to="/contact"
               className={({ isActive }) =>
-                `px-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-action)] rounded ${isActive ? "text-[var(--color-action)] font-medium" : "text-[var(--color-text-secondary)] hover:text-[var(--color-action)] hover:underline"}`
+                `w-[62px] text-center focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-action)] rounded ${isActive ? "text-[var(--color-action)] font-medium" : "text-[var(--color-text-secondary)] hover:text-[var(--color-action)] hover:underline"}`
               }
             >
               Contact
+            </NavLink>
+            <span className="w-px h-4 bg-[var(--color-border)] mx-3" />
+            <NavLink
+              to="/cv"
+              className={({ isActive }) =>
+                `w-[52px] text-center focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-action)] rounded ${isActive ? "text-[var(--color-action)] font-medium" : "text-[var(--color-text-secondary)] hover:text-[var(--color-action)] hover:underline"}`
+              }
+            >
+              About
             </NavLink>
           </div>
         </div>

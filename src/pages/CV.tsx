@@ -8,7 +8,13 @@ export function CV() {
 
   return (
     <div>
-      <h1 className="text-3xl font-bold text-[var(--color-text-primary)] mb-6">CV</h1>
+      <h1 className="text-3xl font-bold text-[var(--color-text-primary)] mb-6">About</h1>
+
+      <section className="mb-10">
+        <p className="text-[var(--color-text-body)] leading-relaxed">{cv.intro}</p>
+      </section>
+
+      <hr className="mb-10 border-[var(--color-border-light)]" />
 
       <section className="mb-8">
         <h2 className="text-xl font-semibold text-[var(--color-text-primary)] mb-3">Experience</h2>

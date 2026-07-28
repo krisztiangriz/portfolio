@@ -7,6 +7,7 @@ export interface CaseStudy {
 }
 
 export interface CVData {
+  intro: string;
   experience: {
     title: string;
     company: string;
