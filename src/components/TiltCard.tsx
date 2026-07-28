@@ -41,7 +41,7 @@ export function TiltCard({ children, maxTilt = DEFAULT_MAX_TILT }: TiltCardProps
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         className={`
-          cursor-pointer rounded-xl bg-[var(--color-surface)] border border-[var(--color-border-light)] p-6
+          cursor-pointer rounded-xl bg-[var(--color-surface)] border border-[var(--color-border-light)] overflow-hidden
           transition-[transform,box-shadow] duration-400 ease-out
           outline-2 outline-offset-2 outline-transparent focus-within:outline-[var(--color-action)]
           ${isHovered ? "shadow-[0_25px_50px_-12px_var(--color-shadow)]" : "shadow-none"}

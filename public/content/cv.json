@@ -1,0 +1,24 @@
+{
+  "experience": [
+    {
+      "title": "Senior Designer",
+      "company": "Company Name",
+      "period": "2022 – Present",
+      "description": "Placeholder description of role and responsibilities."
+    },
+    {
+      "title": "Product Designer",
+      "company": "Previous Company",
+      "period": "2019 – 2022",
+      "description": "Placeholder description of role and responsibilities."
+    }
+  ],
+  "education": [
+    {
+      "title": "Degree in Design",
+      "institution": "University Name",
+      "period": "2015 – 2019"
+    }
+  ],
+  "skills": ["UI Design", "UX Research", "Prototyping", "Design Systems", "Figma", "React"]
+}

@@ -1,16 +1,21 @@
 import { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
-import { caseStudies } from "../data/caseStudies";
+import { useContent } from "../hooks/useContent";
 import { PasswordGate } from "../components/PasswordGate";
 import { CaseStudyCard } from "../components/CaseStudyCard";
+import type { CaseStudy as CaseStudyType } from "../types/content";
 
 export function CaseStudy() {
   const { slug } = useParams<{ slug: string }>();
-  const study = caseStudies.find((s) => s.slug === slug);
+  const { data: caseStudies } = useContent<CaseStudyType[]>("case-studies.json");
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [slug]);
+
+  if (!caseStudies) return null;
+
+  const study = caseStudies.find((s) => s.slug === slug);
 
   if (!study) {
     return (
