@@ -82,7 +82,7 @@ export function About() {
     <div>
       <h1 className="text-3xl font-bold text-[var(--color-text-primary)] mb-6">About</h1>
 
-      <section className="mb-10 flex gap-6 items-start">
+      <section className="mb-10 flex flex-col min-[860px]:flex-row gap-6 items-center min-[860px]:items-start">
         <div className="space-y-4 flex-1">
           {cv.intro.split("\n").map((paragraph, i) => (
             <p key={i} className="text-[var(--color-text-body)] leading-relaxed">{paragraph}</p>
