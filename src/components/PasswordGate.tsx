@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef, type FormEvent } from "react";
+import { useNavigate } from "react-router-dom";
 
 const CORRECT_PASSWORD = import.meta.env.VITE_CASE_STUDY_PASSWORD;
 const SESSION_KEY = "portfolio_unlocked";
@@ -8,6 +9,7 @@ interface PasswordGateProps {
 }
 
 export function PasswordGate({ children }: PasswordGateProps) {
+  const navigate = useNavigate();
   const [unlocked, setUnlocked] = useState(
     () => sessionStorage.getItem(SESSION_KEY) === "true"
   );
@@ -56,7 +58,7 @@ export function PasswordGate({ children }: PasswordGateProps) {
 
   return (
     <>
-      <div className="blur-sm pointer-events-none select-none" aria-hidden="true" inert="">
+      <div className="blur-sm pointer-events-none select-none" aria-hidden="true" inert={true}>
         {children}
       </div>
 
@@ -69,13 +71,26 @@ export function PasswordGate({ children }: PasswordGateProps) {
       >
         <form
           onSubmit={handleSubmit}
-          className="bg-[var(--color-surface)] rounded-xl shadow-2xl p-8 w-full max-w-sm mx-4"
+          className="bg-[var(--color-surface)] rounded-xl shadow-2xl p-8 w-full max-w-sm mx-4 relative"
         >
-          <h2 id="password-gate-title" className="text-xl font-semibold text-[var(--color-text-primary)] mb-2">
-            Password Required
-          </h2>
+          <div className="flex items-center justify-between mb-2">
+            <h2 id="password-gate-title" className="text-xl font-semibold text-[var(--color-text-primary)]">
+              Password Required
+            </h2>
+            <button
+              type="button"
+              onClick={() => navigate("/")}
+              className="text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-action)] rounded"
+              aria-label="Back to portfolio"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+              </svg>
+            </button>
+          </div>
           <p className="text-[var(--color-text-secondary)] text-sm mb-6">
-            Enter the password to view this case study.
+            Enter password to view case studies.
           </p>
           <input
             type="password"
@@ -103,7 +118,7 @@ export function PasswordGate({ children }: PasswordGateProps) {
             type="submit"
             className="mt-4 w-full bg-[var(--color-text-primary)] text-white py-2 rounded-lg hover:bg-[var(--color-text-body)] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-action)]"
           >
-            Unlock
+            View Case Study
           </button>
         </form>
       </div>
