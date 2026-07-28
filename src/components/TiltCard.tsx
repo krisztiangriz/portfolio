@@ -5,9 +5,10 @@ const DEFAULT_MAX_TILT = 12;
 interface TiltCardProps {
   children: ReactNode;
   maxTilt?: number;
+  className?: string;
 }
 
-export function TiltCard({ children, maxTilt = DEFAULT_MAX_TILT }: TiltCardProps) {
+export function TiltCard({ children, maxTilt = DEFAULT_MAX_TILT, className = "" }: TiltCardProps) {
   const [tilt, setTilt] = useState({ x: 0, y: 0 });
   const [isHovered, setIsHovered] = useState(false);
 
@@ -40,7 +41,7 @@ export function TiltCard({ children, maxTilt = DEFAULT_MAX_TILT }: TiltCardProps
   const shadowSpread = isHovered ? -8 : 0;
 
   return (
-    <div className="perspective-[1000px] w-fit">
+    <div className={`perspective-[1000px] ${className}`}>
       <div
         onMouseMove={handleMouseMove}
         onMouseEnter={handleMouseEnter}

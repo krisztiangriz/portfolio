@@ -1,5 +1,76 @@
+import { useState, useCallback, type MouseEvent } from "react";
 import { useContent } from "../hooks/useContent";
 import type { CVData, ContactData } from "../types/content";
+
+function AboutFlipCard() {
+  const [tilt, setTilt] = useState({ x: 0, y: 0 });
+  const [isHovered, setIsHovered] = useState(false);
+  const [isFlipped, setIsFlipped] = useState(false);
+
+  const handleMouseMove = useCallback((e: MouseEvent<HTMLDivElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2;
+    const offsetX = (e.clientX - centerX) / (rect.width / 2);
+    const offsetY = (e.clientY - centerY) / (rect.height / 2);
+    setTilt({ x: offsetY * 12, y: -offsetX * 12 });
+  }, []);
+
+  const handleMouseEnter = useCallback(() => setIsHovered(true), []);
+  const handleMouseLeave = useCallback(() => {
+    setIsHovered(false);
+    setTilt({ x: 0, y: 0 });
+  }, []);
+
+  const shadowX = tilt.y * -1.5;
+  const shadowY = tilt.x * 1.5 + (isHovered ? 20 : 0);
+  const shadowBlur = isHovered ? 40 : 0;
+  const shadowSpread = isHovered ? -8 : 0;
+  const flipRotation = isFlipped ? 180 : 0;
+
+  return (
+    <div className="w-[266px] h-[266px] shrink-0 perspective-[1000px]">
+      <div
+        role="button"
+        tabIndex={0}
+        aria-label="Flip card to reveal photo"
+        aria-pressed={isFlipped}
+        onMouseMove={handleMouseMove}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        onClick={() => setIsFlipped(!isFlipped)}
+        onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); setIsFlipped(!isFlipped); } }}
+        className="w-full h-full cursor-pointer rounded-xl transition-[transform,box-shadow] duration-500 ease-out focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-action)]"
+        style={{
+          transform: `rotateX(${tilt.x}deg) rotateY(${tilt.y + flipRotation}deg)`,
+          transformStyle: "preserve-3d",
+          boxShadow: `${shadowX}px ${shadowY}px ${shadowBlur}px ${shadowSpread}px var(--color-shadow)`,
+        }}
+      >
+        <div
+          className="absolute inset-0 rounded-xl overflow-hidden"
+          style={{ backfaceVisibility: "hidden" }}
+        >
+          <img
+            src={`${import.meta.env.BASE_URL}images/contact-footer.png`}
+            alt="Illustration of trees on a small island"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div
+          className="absolute inset-0 rounded-xl overflow-hidden"
+          style={{ transform: "rotateY(180deg)", backfaceVisibility: "hidden" }}
+        >
+          <img
+            src={`${import.meta.env.BASE_URL}images/contact-footer-alt.png`}
+            alt="Portrait photo of Krisztián Griz"
+            className="w-full h-full object-cover"
+          />
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export function CV() {
   const { data: cv } = useContent<CVData>("about.json");
@@ -11,12 +82,13 @@ export function CV() {
     <div>
       <h1 className="text-3xl font-bold text-[var(--color-text-primary)] mb-6">About</h1>
 
-      <section className="mb-10">
-        <div className="space-y-4">
+      <section className="mb-10 flex gap-6 items-start">
+        <div className="space-y-4 flex-1">
           {cv.intro.split("\n").map((paragraph, i) => (
             <p key={i} className="text-[var(--color-text-body)] leading-relaxed">{paragraph}</p>
           ))}
         </div>
+        <AboutFlipCard />
       </section>
 
       <hr className="mb-10 border-[var(--color-border-light)]" />

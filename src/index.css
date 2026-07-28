@@ -16,14 +16,8 @@
     --color-negative: #E53E3E;
     --color-shadow: #5E6E8C33;
     --color-overlay: rgba(51, 64, 85, 0.3);
-    --color-action: #4A9AF5;
-    --color-action-hover: #3D87E0;
+    --color-action: #6699FF;
+    --color-action-hover: #5588EE;
   }
 
-  @media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after {
-      transition-duration: 0.01ms !important;
-      animation-duration: 0.01ms !important;
-    }
-  }
 }
