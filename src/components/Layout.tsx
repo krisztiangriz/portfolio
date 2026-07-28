@@ -12,7 +12,7 @@ export function Layout() {
       <nav aria-label="Main navigation" className="sticky top-0 z-50 bg-[var(--color-bg)] border-b border-[var(--color-border-light)] px-6 py-4">
         <div className="max-w-[800px] mx-auto flex items-center gap-6">
           <NavLink to="/" className="font-semibold text-[var(--color-text-primary)] text-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-action)] rounded">
-            Krisztian GRIZ
+            Krisztián GRIZ
           </NavLink>
           <div className="flex items-center ml-auto">
             <NavLink
