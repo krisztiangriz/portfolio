@@ -2,7 +2,7 @@ import { useContent } from "../hooks/useContent";
 import type { CVData, ContactData } from "../types/content";
 
 export function CV() {
-  const { data: cv } = useContent<CVData>("cv.json");
+  const { data: cv } = useContent<CVData>("about.json");
   const { data: contact } = useContent<ContactData>("contact.json");
 
   if (!cv) return null;
