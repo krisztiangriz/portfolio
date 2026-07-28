@@ -25,34 +25,34 @@ export function Layout() {
             Krisztián GRIZ
           </NavLink>
           <ul className="flex items-center ml-auto list-none">
-            <li>
+            <li className="w-[79px] text-center">
               <NavLink
                 to="/"
                 end
                 className={({ isActive }) =>
-                  `w-[70px] text-center focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-action)] rounded ${isActive ? "text-[var(--color-action)] font-medium" : "text-[var(--color-text-secondary)] hover:text-[var(--color-action)] hover:underline"}`
+                  `focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-action)] rounded ${isActive ? "text-[var(--color-action)] font-medium" : "text-[var(--color-text-secondary)] hover:text-[var(--color-action)] hover:underline"}`
                 }
               >
                 Portfolio
               </NavLink>
             </li>
             <li aria-hidden="true"><span className="w-px h-4 bg-[var(--color-border)] mx-3 block" /></li>
-            <li>
+            <li className="w-[67px] text-center">
               <NavLink
                 to="/contact"
                 className={({ isActive }) =>
-                  `w-[62px] text-center focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-action)] rounded ${isActive ? "text-[var(--color-action)] font-medium" : "text-[var(--color-text-secondary)] hover:text-[var(--color-action)] hover:underline"}`
+                  `focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-action)] rounded ${isActive ? "text-[var(--color-action)] font-medium" : "text-[var(--color-text-secondary)] hover:text-[var(--color-action)] hover:underline"}`
                 }
               >
                 Contact
               </NavLink>
             </li>
             <li aria-hidden="true"><span className="w-px h-4 bg-[var(--color-border)] mx-3 block" /></li>
-            <li>
+            <li className="w-[60px] text-center">
               <NavLink
                 to="/about"
                 className={({ isActive }) =>
-                  `w-[52px] text-center focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-action)] rounded ${isActive ? "text-[var(--color-action)] font-medium" : "text-[var(--color-text-secondary)] hover:text-[var(--color-action)] hover:underline"}`
+                  `focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-action)] rounded ${isActive ? "text-[var(--color-action)] font-medium" : "text-[var(--color-text-secondary)] hover:text-[var(--color-action)] hover:underline"}`
                 }
               >
                 About

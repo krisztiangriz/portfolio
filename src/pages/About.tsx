@@ -72,7 +72,7 @@ function AboutFlipCard() {
   );
 }
 
-export function CV() {
+export function About() {
   const { data: cv } = useContent<CVData>("about.json");
   const { data: contact } = useContent<ContactData>("contact.json");
 
