@@ -12,7 +12,7 @@ export function Contact() {
           <span className="font-medium text-[var(--color-text-primary)]">Email:</span>{" "}
           <a
             href="mailto:hello@example.com"
-            className="text-[var(--color-text-secondary)] hover:underline"
+            className="text-[var(--color-action)] hover:text-[var(--color-action-hover)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-action)] rounded"
           >
             hello@example.com
           </a>
@@ -23,7 +23,7 @@ export function Contact() {
             href="https://linkedin.com/in/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[var(--color-text-secondary)] hover:underline"
+            className="text-[var(--color-action)] hover:text-[var(--color-action-hover)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-action)] rounded"
           >
             linkedin.com/in/yourprofile
           </a>

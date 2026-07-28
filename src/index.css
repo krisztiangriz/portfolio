@@ -16,5 +16,7 @@
     --color-negative: #E53E3E;
     --color-shadow: #5E6E8C33;
     --color-overlay: rgba(51, 64, 85, 0.3);
+    --color-action: #4A9AF5;
+    --color-action-hover: #3D87E0;
   }
 }

@@ -1,12 +1,13 @@
 import { useState, useCallback, type MouseEvent, type ReactNode } from "react";
 
-const MAX_TILT = 12;
+const DEFAULT_MAX_TILT = 12;
 
 interface TiltCardProps {
   children: ReactNode;
+  maxTilt?: number;
 }
 
-export function TiltCard({ children }: TiltCardProps) {
+export function TiltCard({ children, maxTilt = DEFAULT_MAX_TILT }: TiltCardProps) {
   const [tilt, setTilt] = useState({ x: 0, y: 0 });
   const [isHovered, setIsHovered] = useState(false);
 
@@ -19,10 +20,10 @@ export function TiltCard({ children }: TiltCardProps) {
     const offsetY = (e.clientY - centerY) / (rect.height / 2);
 
     setTilt({
-      x: offsetY * MAX_TILT,
-      y: -offsetX * MAX_TILT,
+      x: offsetY * maxTilt,
+      y: -offsetX * maxTilt,
     });
-  }, []);
+  }, [maxTilt]);
 
   const handleMouseEnter = useCallback(() => {
     setIsHovered(true);
@@ -41,8 +42,10 @@ export function TiltCard({ children }: TiltCardProps) {
         onMouseLeave={handleMouseLeave}
         className={`
           cursor-pointer rounded-xl bg-[var(--color-surface)] border border-[var(--color-border-light)] p-6
-          transition-all duration-400 ease-out
+          transition-[transform,box-shadow] duration-400 ease-out
+          outline-2 outline-offset-2 outline-transparent focus-within:outline-[var(--color-action)]
           ${isHovered ? "shadow-[0_25px_50px_-12px_var(--color-shadow)]" : "shadow-none"}
+          focus-within:shadow-[0_25px_50px_-12px_var(--color-shadow)]
         `}
         style={{
           transform: `rotateX(${tilt.x}deg) rotateY(${tilt.y}deg)`,

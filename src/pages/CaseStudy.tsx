@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { caseStudies } from "../data/caseStudies";
 import { PasswordGate } from "../components/PasswordGate";
@@ -7,6 +8,10 @@ export function CaseStudy() {
   const { slug } = useParams<{ slug: string }>();
   const study = caseStudies.find((s) => s.slug === slug);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [slug]);
+
   if (!study) {
     return (
       <div>
@@ -14,7 +19,7 @@ export function CaseStudy() {
         <p className="text-[var(--color-text-secondary)] mb-4">
           This case study doesn't exist.
         </p>
-        <Link to="/" className="text-[var(--color-text-secondary)] hover:underline">
+        <Link to="/" className="text-[var(--color-action)] hover:text-[var(--color-action-hover)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-action)] rounded">
           Back to home
         </Link>
       </div>
@@ -26,7 +31,7 @@ export function CaseStudy() {
       <div>
         <Link
           to="/"
-          className="text-sm text-[var(--color-text-placeholder)] hover:text-[var(--color-text-body)] mb-6 inline-block"
+          className="text-sm text-[var(--color-action)] hover:text-[var(--color-action-hover)] mb-6 inline-block focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-action)] rounded"
         >
           &larr; Back to all projects
         </Link>
@@ -34,12 +39,17 @@ export function CaseStudy() {
         <p className="text-[var(--color-text-secondary)] mb-8">{study.summary}</p>
 
         <div className="space-y-8">
-          {study.sections.map((section) => (
+          {study.sections.map((section, i) => (
             <section key={section.heading}>
               <h2 className="text-xl font-semibold text-[var(--color-text-primary)] mb-2">
                 {section.heading}
               </h2>
-              <p className="text-[var(--color-text-body)] leading-relaxed">{section.body}</p>
+              <p className="text-[var(--color-text-body)] leading-relaxed mb-4">{section.body}</p>
+              <img
+                src={`https://placehold.co/800x450/ECF1F9/5E6E8C?text=Section+${i + 1}`}
+                alt={`${section.heading} illustration`}
+                className="w-full rounded-lg"
+              />
             </section>
           ))}
         </div>
