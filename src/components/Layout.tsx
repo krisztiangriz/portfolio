@@ -19,7 +19,7 @@ export function Layout() {
               to="/"
               end
               className={({ isActive }) =>
-                `px-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-action)] rounded ${isActive ? "text-[var(--color-action)] font-medium" : "text-[var(--color-text-secondary)] hover:text-[var(--color-action)]"}`
+                `px-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-action)] rounded ${isActive ? "text-[var(--color-action)] font-medium" : "text-[var(--color-text-secondary)] hover:text-[var(--color-action)] hover:underline"}`
               }
             >
               Portfolio
@@ -28,7 +28,7 @@ export function Layout() {
             <NavLink
               to="/cv"
               className={({ isActive }) =>
-                `px-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-action)] rounded ${isActive ? "text-[var(--color-action)] font-medium" : "text-[var(--color-text-secondary)] hover:text-[var(--color-action)]"}`
+                `px-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-action)] rounded ${isActive ? "text-[var(--color-action)] font-medium" : "text-[var(--color-text-secondary)] hover:text-[var(--color-action)] hover:underline"}`
               }
             >
               CV
@@ -37,7 +37,7 @@ export function Layout() {
             <NavLink
               to="/contact"
               className={({ isActive }) =>
-                `px-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-action)] rounded ${isActive ? "text-[var(--color-action)] font-medium" : "text-[var(--color-text-secondary)] hover:text-[var(--color-action)]"}`
+                `px-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-action)] rounded ${isActive ? "text-[var(--color-action)] font-medium" : "text-[var(--color-text-secondary)] hover:text-[var(--color-action)] hover:underline"}`
               }
             >
               Contact

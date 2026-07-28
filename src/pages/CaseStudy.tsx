@@ -24,7 +24,7 @@ export function CaseStudy() {
         <p className="text-[var(--color-text-secondary)] mb-4">
           This case study doesn't exist.
         </p>
-        <Link to="/" className="text-[var(--color-action)] hover:text-[var(--color-action-hover)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-action)] rounded">
+        <Link to="/" className="text-[var(--color-action)] hover:text-[var(--color-action-hover)] hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-action)] rounded">
           Back to home
         </Link>
       </div>
@@ -36,7 +36,7 @@ export function CaseStudy() {
       <div>
         <Link
           to="/"
-          className="text-sm text-[var(--color-action)] hover:text-[var(--color-action-hover)] mb-6 inline-block focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-action)] rounded"
+          className="text-sm text-[var(--color-action)] hover:text-[var(--color-action-hover)] hover:underline mb-6 inline-block focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-action)] rounded"
         >
           &larr; Back to portfolio
         </Link>
