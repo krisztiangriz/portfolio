@@ -1,1 +1,20 @@
 @import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-bg: #FFFFFF;
+    --color-surface: #FFFFFF;
+    --color-text-primary: #334055;
+    --color-text-secondary: #5E6E8C;
+    --color-text-body: #485670;
+    --color-text-placeholder: #8B9BB5;
+    --color-border: #B8C5DB;
+    --color-border-light: #ECF1F9;
+    --color-surface-hover: #ECF1F9;
+    --color-input-bg: #F8F9FD;
+    --color-input-border: #B8C5DB;
+    --color-negative: #E53E3E;
+    --color-shadow: #5E6E8C33;
+    --color-overlay: rgba(51, 64, 85, 0.3);
+  }
+}

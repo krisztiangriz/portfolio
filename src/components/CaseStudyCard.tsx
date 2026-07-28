@@ -1,20 +1,27 @@
 import { Link } from "react-router-dom";
+import { TiltCard } from "./TiltCard";
 import type { CaseStudy } from "../data/caseStudies";
 
 interface CaseStudyCardProps {
   study: CaseStudy;
+  compact?: boolean;
 }
 
-export function CaseStudyCard({ study }: CaseStudyCardProps) {
+export function CaseStudyCard({ study, compact }: CaseStudyCardProps) {
   return (
-    <Link
-      to={`/case-study/${study.slug}`}
-      className="block rounded-lg border border-gray-200 p-6 hover:shadow-md transition-shadow"
-    >
-      <h2 className="text-xl font-semibold text-gray-900 mb-2">
-        {study.title}
-      </h2>
-      <p className="text-gray-600 text-sm">{study.summary}</p>
-    </Link>
+    <TiltCard>
+      <Link
+        to={`/case-study/${study.slug}`}
+        className={`block flex flex-col ${compact ? "h-[200px]" : "h-[388px]"}`}
+      >
+        <div className="w-full flex-1 bg-[var(--color-surface-hover)] rounded-lg mb-3" />
+        <h2 className={`font-semibold text-[var(--color-text-primary)] ${compact ? "text-base" : "text-xl mb-2"}`}>
+          {study.title}
+        </h2>
+        {!compact && (
+          <p className="text-[var(--color-text-secondary)] text-sm">{study.summary}</p>
+        )}
+      </Link>
+    </TiltCard>
   );
 }
