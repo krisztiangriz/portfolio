@@ -1,8 +1,9 @@
 import { useContent } from "../hooks/useContent";
-import type { CVData } from "../types/content";
+import type { CVData, ContactData } from "../types/content";
 
 export function CV() {
   const { data: cv } = useContent<CVData>("cv.json");
+  const { data: contact } = useContent<ContactData>("contact.json");
 
   if (!cv) return null;
 
@@ -11,7 +12,11 @@ export function CV() {
       <h1 className="text-3xl font-bold text-[var(--color-text-primary)] mb-6">About</h1>
 
       <section className="mb-10">
-        <p className="text-[var(--color-text-body)] leading-relaxed">{cv.intro}</p>
+        <div className="space-y-4">
+          {cv.intro.split("\n").map((paragraph, i) => (
+            <p key={i} className="text-[var(--color-text-body)] leading-relaxed">{paragraph}</p>
+          ))}
+        </div>
       </section>
 
       <hr className="mb-10 border-[var(--color-border-light)]" />
@@ -43,17 +48,50 @@ export function CV() {
 
       <section>
         <h2 className="text-xl font-semibold text-[var(--color-text-primary)] mb-3">Skills</h2>
-        <div className="flex flex-wrap gap-2">
-          {cv.skills.map((skill) => (
-            <span
-              key={skill}
-              className="px-3 py-1 bg-[var(--color-surface-hover)] text-[var(--color-text-body)] rounded-full text-sm"
-            >
-              {skill}
-            </span>
+        <div className="space-y-4">
+          {cv.skills.map((group) => (
+            <div key={group.category}>
+              <h3 className="font-medium text-[var(--color-text-primary)] mb-2">{group.category}</h3>
+              <div className="flex flex-wrap gap-2">
+                {group.items.map((skill) => (
+                  <span
+                    key={skill}
+                    className="px-3 py-1 bg-[var(--color-surface-hover)] text-[var(--color-text-body)] rounded-full text-sm"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
           ))}
         </div>
       </section>
+
+      {contact && (
+        <>
+          <hr className="my-12 border-[var(--color-border-light)]" />
+          <h2 className="text-xl font-semibold text-[var(--color-text-primary)] mb-4">
+            Contact
+          </h2>
+          <div className="flex items-center pb-[100px]">
+            <a
+              href={`mailto:${contact.email}`}
+              className="text-[var(--color-action)] hover:text-[var(--color-action-hover)] hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-action)] rounded"
+            >
+              {contact.email}
+            </a>
+            <span className="w-px h-4 bg-[var(--color-border)] mx-3" />
+            <a
+              href={`https://${contact.linkedin}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[var(--color-action)] hover:text-[var(--color-action-hover)] hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-action)] rounded"
+            >
+              LinkedIn
+            </a>
+          </div>
+        </>
+      )}
     </div>
   );
 }

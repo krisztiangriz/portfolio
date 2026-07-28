@@ -34,10 +34,6 @@ export function Contact() {
             {contact.linkedin}
           </a>
         </div>
-        <div>
-          <span className="font-medium text-[var(--color-text-primary)]">Location:</span>{" "}
-          <span className="text-[var(--color-text-body)]">{contact.location}</span>
-        </div>
       </div>
     </div>
   );

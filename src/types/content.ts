@@ -19,7 +19,7 @@ export interface CVData {
     institution: string;
     period: string;
   }[];
-  skills: string[];
+  skills: { category: string; items: string[] }[];
 }
 
 export interface ContactData {
