@@ -3,11 +3,12 @@ import { useParams, Link } from "react-router-dom";
 import { useContent } from "../hooks/useContent";
 import { PasswordGate } from "../components/PasswordGate";
 import { CaseStudyCard } from "../components/CaseStudyCard";
-import type { CaseStudy as CaseStudyType } from "../types/content";
+import type { CaseStudy as CaseStudyType, ContactData } from "../types/content";
 
 export function CaseStudy() {
   const { slug } = useParams<{ slug: string }>();
   const { data: caseStudies } = useContent<CaseStudyType[]>("case-studies.json");
+  const { data: contact } = useContent<ContactData>("contact.json");
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -71,6 +72,32 @@ export function CaseStudy() {
               <CaseStudyCard key={s.slug} study={s} compact />
             ))}
         </div>
+
+        {contact && (
+          <>
+            <hr className="my-12 border-[var(--color-border-light)]" />
+            <h2 className="text-xl font-semibold text-[var(--color-text-primary)] mb-4">
+              Contact
+            </h2>
+            <div className="flex items-center pb-[100px]">
+              <a
+                href={`mailto:${contact.email}`}
+                className="text-[var(--color-action)] hover:text-[var(--color-action-hover)] hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-action)] rounded"
+              >
+                {contact.email}
+              </a>
+              <span className="w-px h-4 bg-[var(--color-border)] mx-3" />
+              <a
+                href={`https://${contact.linkedin}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[var(--color-action)] hover:text-[var(--color-action-hover)] hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-action)] rounded"
+              >
+                LinkedIn
+              </a>
+            </div>
+          </>
+        )}
       </div>
     </PasswordGate>
   );
