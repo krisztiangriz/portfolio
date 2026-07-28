@@ -11,26 +11,26 @@ export function Contact() {
         <div>
           <span className="font-medium text-[var(--color-text-primary)]">Email:</span>{" "}
           <a
-            href="mailto:hello@example.com"
+            href="mailto:krisztian.griz@gmail.com"
             className="text-[var(--color-action)] hover:text-[var(--color-action-hover)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-action)] rounded"
           >
-            hello@example.com
+            krisztian.griz@gmail.com
           </a>
         </div>
         <div>
           <span className="font-medium text-[var(--color-text-primary)]">LinkedIn:</span>{" "}
           <a
-            href="https://linkedin.com/in/"
+            href="https://linkedin.com/in/krisztiangriz"
             target="_blank"
             rel="noopener noreferrer"
             className="text-[var(--color-action)] hover:text-[var(--color-action-hover)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-action)] rounded"
           >
-            linkedin.com/in/yourprofile
+            linkedin.com/in/krisztiangriz
           </a>
         </div>
         <div>
           <span className="font-medium text-[var(--color-text-primary)]">Location:</span>{" "}
-          <span className="text-[var(--color-text-body)]">City, Country</span>
+          <span className="text-[var(--color-text-body)]">Budapest, Hungary</span>
         </div>
       </div>
     </div>

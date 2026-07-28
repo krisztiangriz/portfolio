@@ -51,12 +51,6 @@ export function Layout() {
           <Outlet />
         </div>
       </main>
-
-      <footer className="border-t border-[var(--color-border-light)] px-6 py-4">
-        <div className="max-w-[800px] mx-auto text-center text-sm text-[var(--color-text-placeholder)]">
-          &copy; {new Date().getFullYear()} Krisztian Griz
-        </div>
-      </footer>
     </div>
   );
 }

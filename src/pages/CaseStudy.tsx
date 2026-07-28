@@ -33,7 +33,7 @@ export function CaseStudy() {
           to="/"
           className="text-sm text-[var(--color-action)] hover:text-[var(--color-action-hover)] mb-6 inline-block focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-action)] rounded"
         >
-          &larr; Back to all projects
+          &larr; Back to portfolio
         </Link>
         <h1 className="text-3xl font-bold text-[var(--color-text-primary)] mb-2">{study.title}</h1>
         <p className="text-[var(--color-text-secondary)] mb-8">{study.summary}</p>
