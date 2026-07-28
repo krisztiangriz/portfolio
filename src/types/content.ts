@@ -2,6 +2,7 @@ export interface CaseStudy {
   slug: string;
   title: string;
   summary: string;
+  cover?: string;
   sections: { heading: string; body: string }[];
 }
 

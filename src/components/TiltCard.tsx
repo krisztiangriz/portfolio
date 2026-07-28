@@ -34,6 +34,11 @@ export function TiltCard({ children, maxTilt = DEFAULT_MAX_TILT }: TiltCardProps
     setTilt({ x: 0, y: 0 });
   }, []);
 
+  const shadowX = tilt.y * -1.5;
+  const shadowY = tilt.x * 1.5 + (isHovered ? 20 : 0);
+  const shadowBlur = isHovered ? 40 : 0;
+  const shadowSpread = isHovered ? -8 : 0;
+
   return (
     <div className="perspective-[1000px]">
       <div
@@ -44,12 +49,12 @@ export function TiltCard({ children, maxTilt = DEFAULT_MAX_TILT }: TiltCardProps
           cursor-pointer rounded-xl bg-[var(--color-surface)] border border-[var(--color-border-light)] overflow-hidden
           transition-[transform,box-shadow] duration-400 ease-out
           outline-2 outline-offset-2 outline-transparent focus-within:outline-[var(--color-action)]
-          ${isHovered ? "shadow-[0_25px_50px_-12px_var(--color-shadow)]" : "shadow-none"}
-          focus-within:shadow-[0_25px_50px_-12px_var(--color-shadow)]
+          focus-within:shadow-[0_20px_40px_-8px_var(--color-shadow)]
         `}
         style={{
           transform: `rotateX(${tilt.x}deg) rotateY(${tilt.y}deg)`,
           transformStyle: "preserve-3d",
+          boxShadow: `${shadowX}px ${shadowY}px ${shadowBlur}px ${shadowSpread}px var(--color-shadow)`,
         }}
       >
         {children}
