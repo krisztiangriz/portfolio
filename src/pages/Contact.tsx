@@ -32,11 +32,15 @@ function FlipCard() {
   return (
     <div className="mt-12 mx-auto w-[386px] h-[386px] perspective-[1000px]">
       <div
+        role="button"
+        tabIndex={0}
+        aria-label="Flip card to reveal photo"
         onMouseMove={handleMouseMove}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         onClick={() => setIsFlipped(!isFlipped)}
-        className="w-full h-full cursor-pointer rounded-xl transition-[transform,box-shadow] duration-500 ease-out"
+        onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); setIsFlipped(!isFlipped); } }}
+        className="w-full h-full cursor-pointer rounded-xl transition-[transform,box-shadow] duration-500 ease-out focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-action)]"
         style={{
           transform: `rotateX(${tilt.x}deg) rotateY(${tilt.y + flipRotation}deg)`,
           transformStyle: "preserve-3d",
@@ -93,6 +97,7 @@ export function Contact() {
             href={`https://${contact.linkedin}`}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="LinkedIn (opens in new tab)"
             className="text-[var(--color-action)] hover:text-[var(--color-action-hover)] hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-action)] rounded"
           >
             {contact.linkedin}

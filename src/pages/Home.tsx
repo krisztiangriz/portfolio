@@ -16,7 +16,7 @@ export function Home() {
       <p className="text-[var(--color-text-secondary)] mb-6">
         {portfolio.subtitle}
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 min-[860px]:grid-cols-2 gap-6 justify-items-center min-[860px]:justify-items-start">
         {caseStudies.map((study) => (
           <CaseStudyCard key={study.slug} study={study} />
         ))}

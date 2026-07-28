@@ -7,7 +7,7 @@
     --color-text-primary: #334055;
     --color-text-secondary: #5E6E8C;
     --color-text-body: #485670;
-    --color-text-placeholder: #8B9BB5;
+    --color-text-placeholder: #6B7A96;
     --color-border: #B8C5DB;
     --color-border-light: #ECF1F9;
     --color-surface-hover: #ECF1F9;
@@ -18,5 +18,12 @@
     --color-overlay: rgba(51, 64, 85, 0.3);
     --color-action: #4A9AF5;
     --color-action-hover: #3D87E0;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      transition-duration: 0.01ms !important;
+      animation-duration: 0.01ms !important;
+    }
   }
 }

@@ -12,7 +12,7 @@ export function CaseStudyCard({ study, compact }: CaseStudyCardProps) {
     <TiltCard>
       <Link
         to={`/case-study/${study.slug}`}
-        className={`block relative overflow-hidden focus:outline-none ${compact ? "h-[200px]" : "h-[386px] w-[386px]"}`}
+        className={`block relative overflow-hidden focus-visible:outline-none ${compact ? "h-[200px] w-[200px]" : "h-[386px] w-[386px]"}`}
       >
         <img
           src={study.cover ?? `https://placehold.co/800x450/ECF1F9/5E6E8C?text=${encodeURIComponent(study.title)}`}

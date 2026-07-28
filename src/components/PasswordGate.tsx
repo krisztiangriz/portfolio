@@ -24,6 +24,10 @@ export function PasswordGate({ children }: PasswordGateProps) {
 
     const focusableSelector = 'input, button, [tabindex]:not([tabindex="-1"])';
     const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        navigate("/");
+        return;
+      }
       if (e.key !== "Tab") return;
       const focusable = dialog.querySelectorAll<HTMLElement>(focusableSelector);
       const first = focusable[0];
@@ -100,6 +104,7 @@ export function PasswordGate({ children }: PasswordGateProps) {
               setError(false);
             }}
             placeholder="Password"
+            aria-label="Password"
             autoFocus
             aria-invalid={error}
             aria-describedby={error ? "password-error" : undefined}

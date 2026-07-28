@@ -40,7 +40,7 @@ export function TiltCard({ children, maxTilt = DEFAULT_MAX_TILT }: TiltCardProps
   const shadowSpread = isHovered ? -8 : 0;
 
   return (
-    <div className="perspective-[1000px]">
+    <div className="perspective-[1000px] w-fit">
       <div
         onMouseMove={handleMouseMove}
         onMouseEnter={handleMouseEnter}

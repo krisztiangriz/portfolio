@@ -86,11 +86,12 @@ export function CaseStudy() {
               >
                 {contact.email}
               </a>
-              <span className="w-px h-4 bg-[var(--color-border)] mx-3" />
+              <span className="w-px h-4 bg-[var(--color-border)] mx-3" aria-hidden="true" />
               <a
                 href={`https://${contact.linkedin}`}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="LinkedIn (opens in new tab)"
                 className="text-[var(--color-action)] hover:text-[var(--color-action-hover)] hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-action)] rounded"
               >
                 LinkedIn
