@@ -1,39 +1,38 @@
 import sharp from "sharp";
-import { readFileSync, writeFileSync, readdirSync, unlinkSync, renameSync } from "node:fs";
+import { readFileSync, readdirSync, statSync } from "node:fs";
 import { join } from "node:path";
 
 const ROOT = join(import.meta.dirname, "..");
 const IMAGES_DIR = join(ROOT, "public", "images");
-const CASE_STUDIES_PATH = join(ROOT, "public", "content", "case-studies.json");
 
-const PUBLIC_FILES = ["contact-footer.png", "contact-footer-alt.png"];
+const MAX_WIDTH = 1920;
+const QUALITY = 90;
 
-// Convert all PNGs (including covers and public files)
-const pngs = readdirSync(IMAGES_DIR).filter(
-  (f) => f.endsWith(".png") && !f.endsWith(".enc"),
+const webps = readdirSync(IMAGES_DIR).filter(
+  (f) => f.endsWith(".webp") && !f.endsWith(".enc"),
 );
 
-let converted = 0;
+let optimized = 0;
 let savedBytes = 0;
 
-for (const filename of pngs) {
-  const inputPath = join(IMAGES_DIR, filename);
-  const outputPath = join(IMAGES_DIR, filename.replace(/\.png$/, ".webp"));
+for (const filename of webps) {
+  const filePath = join(IMAGES_DIR, filename);
+  const inputSize = statSync(filePath).size;
 
-  const inputSize = readFileSync(inputPath).length;
-  await sharp(inputPath).webp({ lossless: true }).toFile(outputPath);
-  const outputSize = readFileSync(outputPath).length;
+  const tempPath = filePath + ".tmp";
+  await sharp(filePath)
+    .resize({ width: MAX_WIDTH, withoutEnlargement: true })
+    .webp({ quality: QUALITY })
+    .toFile(tempPath);
 
-  unlinkSync(inputPath);
+  const { rename } = await import("node:fs/promises");
+  await rename(tempPath, filePath);
+
+  const outputSize = statSync(filePath).size;
   savedBytes += inputSize - outputSize;
-  converted++;
+  optimized++;
+  console.log(`  ${filename}: ${(inputSize / 1024).toFixed(0)}KB → ${(outputSize / 1024).toFixed(0)}KB`);
 }
 
-console.log(`Converted ${converted} images to WebP`);
-console.log(`Saved ${(savedBytes / 1024 / 1024).toFixed(1)} MB`);
-
-// Update case-studies.json: .png → .webp
-let json = readFileSync(CASE_STUDIES_PATH, "utf-8");
-json = json.replace(/\.png"/g, '.webp"');
-writeFileSync(CASE_STUDIES_PATH, json);
-console.log("Updated case-studies.json image paths");
+console.log(`\nOptimized ${optimized} images (resize ≤${MAX_WIDTH}px, quality ${QUALITY})`);
+console.log(`Saved ${(savedBytes / 1024 / 1024).toFixed(1)} MB total`);
