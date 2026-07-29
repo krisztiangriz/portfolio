@@ -8,10 +8,10 @@ interface CaseStudyCardProps {
 
 export function CaseStudyCard({ study, compact }: CaseStudyCardProps) {
   return (
-    <TiltCard className={compact ? "max-md:w-fit max-md:mx-auto" : "w-fit"}>
+    <TiltCard className={compact ? "max-md:mx-auto max-md:max-w-[386px] max-md:w-full" : "w-full max-w-[386px]"}>
       <Link
         to={`/case-study/${study.slug}`}
-        className={`block relative overflow-hidden focus-visible:outline-none ${compact ? "h-[386px] w-[386px] md:h-[200px] md:w-full" : "h-[386px] w-[386px]"}`}
+        className={`block relative overflow-hidden focus-visible:outline-none ${compact ? "h-[386px] w-full md:h-[200px] md:w-full" : "h-[386px] w-full"}`}
       >
         <img
           src={study.cover ?? `https://placehold.co/800x450/ECF1F9/5E6E8C?text=${encodeURIComponent(study.title)}`}

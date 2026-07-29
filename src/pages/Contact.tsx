@@ -3,7 +3,7 @@ import type { ContactData } from "../types/content";
 
 function ContactImage() {
   return (
-    <div className="mt-12 mx-auto w-[386px] h-[386px]">
+    <div className="mt-12 mx-auto w-full max-w-[386px] aspect-square">
       <img
         src={`${import.meta.env.BASE_URL}images/contact-footer.webp`}
         alt="Illustration of trees on a small island"

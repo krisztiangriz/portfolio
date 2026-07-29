@@ -12,7 +12,7 @@ export function Layout() {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col overflow-x-hidden">
       <a
         href="#/"
         className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[100] focus:bg-[var(--color-surface)] focus:px-4 focus:py-2 focus:rounded-lg focus:shadow-lg focus:text-[var(--color-text-primary)]"
@@ -20,8 +20,8 @@ export function Layout() {
         Skip to main content
       </a>
       <nav aria-label="Main navigation" className={`sticky top-0 z-50 bg-[var(--color-bg)] border-b px-6 py-4 transition-[border-color,box-shadow] duration-200 ${scrolled ? "border-[var(--color-border-light)] shadow-[0_4px_12px_-2px_var(--color-shadow)]" : "border-transparent"}`}>
-        <div className="max-w-[800px] mx-auto flex items-center gap-6">
-          <NavLink to="/" className="font-semibold text-[var(--color-text-primary)] text-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-action)] rounded">
+        <div className="max-w-[800px] mx-auto flex items-center gap-3 sm:gap-6">
+          <NavLink to="/" className="font-semibold text-[var(--color-text-primary)] text-lg whitespace-nowrap shrink-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-action)] rounded">
             Krisztián GRIZ
           </NavLink>
           <ul className="flex items-center ml-auto list-none">
