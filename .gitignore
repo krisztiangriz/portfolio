@@ -3,9 +3,9 @@
 # Sensitive content (extracted from content-archive.enc, never committed)
 public/content/case-studies.json
 public/images/*
-!public/images/*-cover.png
-!public/images/contact-footer.png
-!public/images/contact-footer-alt.png
+!public/images/*-cover.webp
+!public/images/contact-footer.webp
+!public/images/contact-footer-alt.webp
 
 # Generated at build/dev time
 public/content/portfolio-cards.json

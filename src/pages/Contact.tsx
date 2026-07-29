@@ -5,7 +5,7 @@ function ContactImage() {
   return (
     <div className="mt-12 mx-auto w-[386px] h-[386px]">
       <img
-        src={`${import.meta.env.BASE_URL}images/contact-footer.png`}
+        src={`${import.meta.env.BASE_URL}images/contact-footer.webp`}
         alt="Illustration of trees on a small island"
         className="w-full h-full object-cover rounded-xl"
       />

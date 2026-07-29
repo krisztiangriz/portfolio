@@ -52,7 +52,7 @@ function AboutFlipCard() {
           style={{ backfaceVisibility: "hidden" }}
         >
           <img
-            src={`${import.meta.env.BASE_URL}images/contact-footer.png`}
+            src={`${import.meta.env.BASE_URL}images/contact-footer.webp`}
             alt="Illustration of trees on a small island"
             className="w-full h-full object-cover"
           />
@@ -62,7 +62,7 @@ function AboutFlipCard() {
           style={{ transform: "rotateY(180deg)", backfaceVisibility: "hidden" }}
         >
           <img
-            src={`${import.meta.env.BASE_URL}images/contact-footer-alt.png`}
+            src={`${import.meta.env.BASE_URL}images/contact-footer-alt.webp`}
             alt="Portrait photo of Krisztián Griz"
             className="w-full h-full object-cover"
           />
