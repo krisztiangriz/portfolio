@@ -1,9 +1,8 @@
 import { Link } from "react-router-dom";
 import { TiltCard } from "./TiltCard";
-import type { CaseStudy } from "../types/content";
 
 interface CaseStudyCardProps {
-  study: CaseStudy;
+  study: { slug: string; title: string; summary: string; cover?: string };
   compact?: boolean;
 }
 

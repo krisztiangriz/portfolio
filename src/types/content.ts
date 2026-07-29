@@ -35,3 +35,17 @@ export interface PortfolioData {
   title: string;
   subtitle: string;
 }
+
+export interface PortfolioCard {
+  slug: string;
+  title: string;
+  summary: string;
+  cover?: string;
+}
+
+export interface CryptoManifest {
+  salt: string;
+  iterations: number;
+  verificationToken: string;
+  version: number;
+}

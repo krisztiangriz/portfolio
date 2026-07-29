@@ -1,5 +1,11 @@
 .env
 
+# Generated at build/dev time
+public/content/portfolio-cards.json
+public/content/crypto-manifest.json
+public/content/case-studies.enc
+public/images/*.enc
+
 # Logs
 logs
 *.log

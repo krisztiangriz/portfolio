@@ -1,8 +1,6 @@
 import { useState, useEffect, useRef, type FormEvent } from "react";
 import { useNavigate } from "react-router-dom";
-
-const CORRECT_PASSWORD = import.meta.env.VITE_CASE_STUDY_PASSWORD;
-const SESSION_KEY = "portfolio_unlocked";
+import { useCrypto } from "../hooks/useCrypto";
 
 interface PasswordGateProps {
   children: React.ReactNode;
@@ -10,15 +8,13 @@ interface PasswordGateProps {
 
 export function PasswordGate({ children }: PasswordGateProps) {
   const navigate = useNavigate();
-  const [unlocked, setUnlocked] = useState(
-    () => sessionStorage.getItem(SESSION_KEY) === "true"
-  );
+  const { isUnlocked, unlocking, unlock } = useCrypto();
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
   const dialogRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (unlocked) return;
+    if (isUnlocked) return;
     const dialog = dialogRef.current;
     if (!dialog) return;
 
@@ -43,20 +39,15 @@ export function PasswordGate({ children }: PasswordGateProps) {
 
     document.addEventListener("keydown", handleKeyDown);
     return () => document.removeEventListener("keydown", handleKeyDown);
-  }, [unlocked]);
+  }, [isUnlocked, navigate]);
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    if (password === CORRECT_PASSWORD) {
-      sessionStorage.setItem(SESSION_KEY, "true");
-      setUnlocked(true);
-      setError(false);
-    } else {
-      setError(true);
-    }
+    const success = await unlock(password);
+    if (!success) setError(true);
   };
 
-  if (unlocked) {
+  if (isUnlocked) {
     return <>{children}</>;
   }
 
@@ -106,6 +97,7 @@ export function PasswordGate({ children }: PasswordGateProps) {
             placeholder="Password"
             aria-label="Password"
             autoFocus
+            disabled={unlocking}
             aria-invalid={error}
             aria-describedby={error ? "password-error" : undefined}
             className={`w-full px-4 py-2 border rounded-lg transition-colors bg-[var(--color-input-bg)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-action)] ${
@@ -121,9 +113,10 @@ export function PasswordGate({ children }: PasswordGateProps) {
           )}
           <button
             type="submit"
-            className="mt-4 w-full bg-[var(--color-text-primary)] text-white py-2 rounded-lg hover:bg-[var(--color-text-body)] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-action)]"
+            disabled={unlocking}
+            className="mt-4 w-full bg-[var(--color-text-primary)] text-white py-2 rounded-lg hover:bg-[var(--color-text-body)] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-action)] disabled:opacity-50"
           >
-            View Case Study
+            {unlocking ? "Verifying…" : "View Case Study"}
           </button>
         </form>
       </div>

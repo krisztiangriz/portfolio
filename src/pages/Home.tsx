@@ -1,12 +1,12 @@
 import { useContent } from "../hooks/useContent";
 import { CaseStudyCard } from "../components/CaseStudyCard";
-import type { CaseStudy, PortfolioData } from "../types/content";
+import type { PortfolioCard, PortfolioData } from "../types/content";
 
 export function Home() {
   const { data: portfolio } = useContent<PortfolioData>("portfolio.json");
-  const { data: caseStudies } = useContent<CaseStudy[]>("case-studies.json");
+  const { data: cards } = useContent<PortfolioCard[]>("portfolio-cards.json");
 
-  if (!portfolio || !caseStudies) return null;
+  if (!portfolio || !cards) return null;
 
   return (
     <div className="max-w-[800px] mx-auto">
@@ -17,8 +17,8 @@ export function Home() {
         {portfolio.subtitle}
       </p>
       <div className="grid grid-cols-1 min-[860px]:grid-cols-2 gap-6 justify-items-center min-[860px]:justify-items-start">
-        {caseStudies.map((study) => (
-          <CaseStudyCard key={study.slug} study={study} />
+        {cards.map((card) => (
+          <CaseStudyCard key={card.slug} study={card} />
         ))}
       </div>
     </div>
