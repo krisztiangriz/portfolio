@@ -1,9 +1,11 @@
+export type CaseStudyImage = string | { src: string; caption?: string; captionAlign?: "left" | "center" | "right" };
+
 export interface CaseStudy {
   slug: string;
   title: string;
   summary: string;
   cover?: string;
-  sections: { heading: string; body: string }[];
+  sections: { heading: string; body: string; image?: CaseStudyImage; images?: CaseStudyImage[] }[];
 }
 
 export interface CVData {
