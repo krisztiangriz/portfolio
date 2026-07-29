@@ -1,5 +1,10 @@
 .env
 
+# Sensitive content (extracted from content-archive.enc, never committed)
+public/content/case-studies.json
+public/images/*
+!public/images/*-cover.png
+
 # Generated at build/dev time
 public/content/portfolio-cards.json
 public/content/crypto-manifest.json
