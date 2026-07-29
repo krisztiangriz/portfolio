@@ -188,7 +188,7 @@ export function CaseStudy() {
             <h2 className="text-xl font-semibold text-[var(--color-text-primary)] mb-4">
               Contact
             </h2>
-            <div className="flex items-center justify-center pb-[100px]">
+            <div className="flex items-center pb-[100px]">
               <a
                 href={`mailto:${contact.email}`}
                 className="text-[var(--color-action)] hover:text-[var(--color-action-hover)] hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-action)] rounded"
