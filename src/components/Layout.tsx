@@ -20,7 +20,7 @@ export function Layout() {
         Skip to main content
       </a>
       <nav aria-label="Main navigation" className={`sticky top-0 z-50 bg-[var(--color-bg)] border-b px-6 py-4 transition-[border-color,box-shadow] duration-200 ${scrolled ? "border-[var(--color-border-light)] shadow-[0_4px_12px_-2px_var(--color-shadow)]" : "border-transparent"}`}>
-        <div className="max-w-[800px] mx-auto flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-6">
+        <div className="max-w-[800px] mx-auto flex flex-col items-center sm:flex-row sm:items-center gap-1 sm:gap-6">
           <NavLink to="/" className="font-semibold text-[var(--color-text-primary)] text-lg whitespace-nowrap focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-action)] rounded">
             Krisztián GRIZ
           </NavLink>
