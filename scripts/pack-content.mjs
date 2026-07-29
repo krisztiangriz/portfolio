@@ -18,7 +18,7 @@ if (!password) {
 // Create tar.gz of sensitive content (relative to public/)
 const tarFile = join(ROOT, ".content-archive.tar.gz");
 execSync(
-  `tar czf "${tarFile}" -C "${join(ROOT, "public")}" content/case-studies.json $(find images -type f -not -name '*-cover.*' -not -name '*.enc' | sort)`,
+  `tar czf "${tarFile}" -C "${join(ROOT, "public")}" content/case-studies.json $(find images -type f -not -name '*-cover.*' -not -name 'contact-footer.png' -not -name 'contact-footer-alt.png' -not -name '*.enc' | sort)`,
   { cwd: join(ROOT, "public"), stdio: "pipe" },
 );
 const tarBuffer = readFileSync(tarFile);

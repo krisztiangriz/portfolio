@@ -54,9 +54,10 @@ writeFileSync(join(CONTENT_DIR, "case-studies.enc"), encrypt(caseStudiesBuffer))
 console.log("Generated case-studies.enc");
 
 // Encrypt non-cover images (write .enc alongside originals)
+const PUBLIC_IMAGES = ["contact-footer.png", "contact-footer-alt.png"];
 if (existsSync(IMAGES_DIR)) {
   const images = readdirSync(IMAGES_DIR).filter(
-    (f) => !f.includes("-cover.") && !f.endsWith(".enc") && /\.(png|jpg|jpeg|gif|webp|svg)$/i.test(f),
+    (f) => !f.includes("-cover.") && !PUBLIC_IMAGES.includes(f) && !f.endsWith(".enc") && /\.(png|jpg|jpeg|gif|webp|svg)$/i.test(f),
   );
 
   for (const filename of images) {

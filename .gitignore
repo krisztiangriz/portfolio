@@ -4,6 +4,8 @@
 public/content/case-studies.json
 public/images/*
 !public/images/*-cover.png
+!public/images/contact-footer.png
+!public/images/contact-footer-alt.png
 
 # Generated at build/dev time
 public/content/portfolio-cards.json

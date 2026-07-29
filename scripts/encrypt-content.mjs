@@ -40,8 +40,9 @@ console.log("Encrypted case-studies.json -> case-studies.enc");
 
 // 3. Encrypt non-cover images
 if (existsSync(IMAGES_DIR)) {
+  const PUBLIC_IMAGES = ["contact-footer.png", "contact-footer-alt.png"];
   const images = readdirSync(IMAGES_DIR).filter(
-    (f) => !f.includes("-cover.") && /\.(png|jpg|jpeg|gif|webp|svg)$/i.test(f),
+    (f) => !f.includes("-cover.") && !PUBLIC_IMAGES.includes(f) && /\.(png|jpg|jpeg|gif|webp|svg)$/i.test(f),
   );
 
   for (const filename of images) {
