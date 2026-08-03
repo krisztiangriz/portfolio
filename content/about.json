@@ -1,0 +1,53 @@
+{
+  "intro": "Design leader with over 12 years of experience driving innovation and results for Scandinavian and Silicon Valley startups as well as Wall Street enterprises, including multiple IP-protected solutions.\nProven track record of leading high-performing design teams with a strategic, outcome-focused approach—balancing clear direction with autonomy and structured checkpoints to ensure project success.\nKnown for cultivating open, collaborative cultures within cross-functional teams, with a strong emphasis on aligning user experience with measurable business impact.",
+  "experience": [
+    {
+      "title": "Product Design Lead",
+      "company": "Lab49",
+      "period": "2024 – Present",
+      "description": ""
+    },
+    {
+      "title": "Product Design Manager",
+      "company": "Rollbar",
+      "period": "2020 – 2023",
+      "description": ""
+    },
+    {
+      "title": "Senior UX Designer",
+      "company": "Avatao",
+      "period": "2019 – 2020",
+      "description": ""
+    }
+  ],
+  "education": [
+    {
+      "title": "Bachelor Degree in Design",
+      "institution": "Xamk South-Eastern Finland University of Applied Sciences, Finland",
+      "period": "2013"
+    },
+    {
+      "title": "Exchange program, Product Design",
+      "institution": "Istituto Europeo di Design, Italy",
+      "period": "2011–2012"
+    }
+  ],
+  "skills": [
+    {
+      "category": "Leadership & Strategy",
+      "items": ["Team Management", "Product Strategy", "Systems Thinking", "Design Operations", "Cross-functional Collaboration", "Hiring & Talent Development", "Stakeholder Alignment"]
+    },
+    {
+      "category": "Communication & Collaboration",
+      "items": ["Consulting", "Presentation", "Storytelling", "Workshop Facilitation", "Cross-cultural Communication", "Design Advocacy"]
+    },
+    {
+      "category": "Design Craft & UX Expertise",
+      "items": ["Design Thinking", "Concept Development", "Problem Solving", "UX Design", "UI Design", "User Research", "Wireframing & Prototyping (Lo-fi/Hi-fi)", "Visual Design", "Design Specifications", "Interaction Design (IxD)", "Accessibility (WCAG)", "Information Architecture", "Usability Testing"]
+    },
+    {
+      "category": "AI & Emerging Tools",
+      "items": ["Claude", "ChatGPT", "Copilot", "Prompt Engineering", "Data Visualization"]
+    }
+  ]
+}

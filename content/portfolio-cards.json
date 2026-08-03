@@ -1,0 +1,26 @@
+[
+  {
+    "slug": "modernization-of-a-web-platform",
+    "title": "Modernization of a Web Platform",
+    "summary": "80%+ user adoption via accessible redesign",
+    "cover": "/portfolio/images/modernization-of-a-web-platform-cover.webp"
+  },
+  {
+    "slug": "timeline-app",
+    "title": "Timeline App",
+    "summary": "App built with AI that capture, organize and visualize work",
+    "cover": "/portfolio/images/timeline-app-cover.webp"
+  },
+  {
+    "slug": "ai-native-design-execution",
+    "title": "AI Native Design Execution",
+    "summary": "Use AI to improve design execution workflow by 208%",
+    "cover": "/portfolio/images/ai-native-design-execution-cover.webp"
+  },
+  {
+    "slug": "competency-mapping-for-designers",
+    "title": "Competency Mapping for Designers",
+    "summary": "Enable individually targeted competency up-skilling",
+    "cover": "/portfolio/images/competency-mapping-for-designers-cover.webp"
+  }
+]

@@ -1,0 +1,238 @@
+[
+  {
+    "slug": "modernization-of-a-web-platform",
+    "title": "Modernization of a Web Platform",
+    "summary": "80%+ user adoption via accessible redesign",
+    "cover": "/portfolio/images/modernization-of-a-web-platform-cover.webp",
+    "sections": [
+      {
+        "heading": "Context",
+        "body": "The legacy platform had poor mobile usability, limited accessibility support, and no coherent design system—resulting in disengagement and usability drop-offs.",
+        "image": { "src": "/portfolio/images/modernization-of-a-web-platform-1.webp", "caption": "Updated user interface" }
+      },
+      {
+        "heading": "Problem Statement",
+        "body": "Our outdated digital platform and tech stack hinder user experience and accessibility, especially on mobile, needing an immediate modernization to ensure future growth, expandability and inclusivity."
+      },
+      {
+        "heading": "Goals",
+        "body": "Improve mobile responsiveness. Enhance accessibility compliance. Optimize performance and load times. Decrease time to identify issues. Increase decision making speed.",
+        "image": { "src": "/portfolio/images/modernization-of-a-web-platform-2.webp", "caption": "Iterative design approach", "captionAlign": "center" },
+        "images": [
+          { "src": "/portfolio/images/modernization-of-a-web-platform-3.webp", "caption": "Design process", "captionAlign": "center" }
+        ]
+      },
+      {
+        "heading": "Hypothesis",
+        "body": "Persistent layouts for actions and information regardless of browser viewport size will increase user adoption.",
+        "image": { "src": "/portfolio/images/modernization-of-a-web-platform-4.webp", "caption": "Audit of existing app", "captionAlign": "center" },
+        "images": [
+          { "src": "/portfolio/images/modernization-of-a-web-platform-5.webp", "caption": "Flow diagrams", "captionAlign": "center" },
+          { "src": "/portfolio/images/modernization-of-a-web-platform-6.webp", "caption": "Two conceptual information architectures", "captionAlign": "center" }
+        ]
+      },
+      {
+        "heading": "Actions",
+        "body": "Reworked the information architecture to streamline navigation and content discoverability. Designed a mobile-first UI with accessibility best practices baked in. Collaborated with dev teams to ensure scalable, performance-optimized implementation.",
+        "image": { "src": "/portfolio/images/modernization-of-a-web-platform-7.webp", "caption": "Sketches", "captionAlign": "center" },
+        "images": [
+          { "src": "/portfolio/images/modernization-of-a-web-platform-8.webp", "caption": "App architecture", "captionAlign": "center" },
+          { "src": "/portfolio/images/modernization-of-a-web-platform-9.webp", "caption": "Gradual increase of fidelity", "captionAlign": "center" },
+          { "src": "/portfolio/images/modernization-of-a-web-platform-10.webp", "caption": "Validation of initial design", "captionAlign": "center" },
+          { "src": "/portfolio/images/modernization-of-a-web-platform-11.webp", "caption": "More in-house research to address issues", "captionAlign": "center" },
+          { "src": "/portfolio/images/modernization-of-a-web-platform-12.webp", "caption": "Initial course corrected interface" },
+          { "src": "/portfolio/images/modernization-of-a-web-platform-13.webp", "caption": "Responsive web and modular design" },
+          { "src": "/portfolio/images/modernization-of-a-web-platform-14.webp", "caption": "Feature support matrix", "captionAlign": "center" },
+          { "src": "/portfolio/images/modernization-of-a-web-platform-15.webp", "caption": "Modular components", "captionAlign": "center" },
+          { "src": "/portfolio/images/modernization-of-a-web-platform-16.webp", "caption": "Before and after", "captionAlign": "center" }
+        ]
+      },
+      {
+        "heading": "Outcome",
+        "body": "Achieved 80%+ user adoption before full migration off the legacy system. Enhanced cross-device usability and accessibility. Addressed remaining usability concerns raised by users, reinforcing design decisions.",
+        "image": { "src": "/portfolio/images/modernization-of-a-web-platform-17.webp", "caption": "Summary of outcomes" },
+        "images": [
+          { "src": "/portfolio/images/modernization-of-a-web-platform-18.webp", "caption": "New features", "captionAlign": "center" },
+          { "src": "/portfolio/images/modernization-of-a-web-platform-19.webp", "caption": "Future concepts", "captionAlign": "center" }
+        ]
+      },
+      {
+        "heading": "Learnings",
+        "body": "This project demonstrated the power of foundational UX improvements. It helped restore user trust, improved system accessibility, and enabled a faster, more scalable design process."
+      }
+    ]
+  },
+  {
+    "slug": "timeline-app",
+    "title": "Timeline App",
+    "summary": "Capture, organize and visualize work",
+    "cover": "/portfolio/images/timeline-app-cover.webp",
+    "sections": [
+      {
+        "heading": "Context",
+        "body": "Understanding where efforts are spent can help drive behavioural change to focus on impactful work.",
+        "image": { "src": "/portfolio/images/timeline-app-1.webp", "caption": "Snapshot of Timeline app and calendar" },
+        "images": [
+          { "src": "/portfolio/images/timeline-app-2.webp", "caption": "Previous ways of tracking tasks" }
+        ]
+      },
+      {
+        "heading": "Problem Statement",
+        "body": "What am I spending my time on at work?",
+        "image": { "src": "/portfolio/images/timeline-app-3.webp", "caption": "Bridging the gap", "captionAlign": "center" }
+      },
+      {
+        "heading": "Goals",
+        "body": "Centralise todo list. Increase visibility into work. Gain insight into time distribution among tasks. Avoid vendor lock-in and compliance grey zones."
+      },
+      {
+        "heading": "Hypothesis",
+        "body": "Understanding where my time is spent will enable better time management and effort allocation."
+      },
+      {
+        "heading": "Actions",
+        "body": "Mapped out requirements for tracking work. Experimented with available apps. Built end-to-end workflows. Pivoted and developed custom app via AI.",
+        "image": { "src": "/portfolio/images/timeline-app-4.webp", "caption": "Options", "captionAlign": "center" },
+        "images": [
+          { "src": "/portfolio/images/timeline-app-5.webp", "caption": "Analysis of options", "captionAlign": "center" },
+          { "src": "/portfolio/images/timeline-app-6.webp", "caption": "Finalist", "captionAlign": "center" },
+          { "src": "/portfolio/images/timeline-app-7.webp", "caption": "Structure for Reminders app", "captionAlign": "center" },
+          { "src": "/portfolio/images/timeline-app-8.webp", "caption": "Information organization", "captionAlign": "center" },
+          { "src": "/portfolio/images/timeline-app-9.webp", "caption": "Information flows", "captionAlign": "center" },
+          { "src": "/portfolio/images/timeline-app-10.webp", "caption": "Shortcuts to capture and transfer data" },
+          { "src": "/portfolio/images/timeline-app-11.webp", "caption": "Essential commands", "captionAlign": "center" },
+          { "src": "/portfolio/images/timeline-app-12.webp", "caption": "CSV text data transferred to Numbers", "captionAlign": "center" },
+          { "src": "/portfolio/images/timeline-app-13.webp", "caption": "Visualization", "captionAlign": "center" },
+          { "src": "/portfolio/images/timeline-app-14.webp", "captionAlign": "center" },
+          { "src": "/portfolio/images/timeline-app-15.webp", "caption": "Consolidation via AI", "captionAlign": "center" },
+          { "src": "/portfolio/images/timeline-app-16.webp", "caption": "One app to capture, organize and visualize data", "captionAlign": "center" },
+          { "src": "/portfolio/images/timeline-app-17.webp", "caption": "Timeline entry logic", "captionAlign": "center" },
+          { "src": "/portfolio/images/timeline-app-18.webp", "caption": "From initial design to product", "captionAlign": "center" },
+          { "src": "/portfolio/images/timeline-app-19.webp", "caption": "Design iterations", "captionAlign": "center" },
+          { "src": "/portfolio/images/timeline-app-20.webp", "caption": "App building blocks" },
+          { "src": "/portfolio/images/timeline-app-21.webp", "caption": "Timelines, charts, documents ", "captionAlign": "center" },
+          { "src": "/portfolio/images/timeline-app-22.webp", "caption": "Onboarding tutorial and dark mode support", "captionAlign": "center" },
+          { "src": "/portfolio/images/timeline-app-23.webp", "caption": "Vibe coding in progress", "captionAlign": "center" },
+          { "src": "/portfolio/images/timeline-app-24.webp", "caption": "Github repo", "captionAlign": "center" },
+          { "src": "/portfolio/images/timeline-app-25.webp", "caption": "Post release refactoring", "captionAlign": "center" }
+        ]
+      },
+      {
+        "heading": "Outcome",
+        "body": "Developed a flow to capture work via built-in native apps. Simplified requirements to reduce noise. Vibe-coded a todo and visualisation app.",
+        "image": { "src": "/portfolio/images/timeline-app-26.webp", "caption": "Summary of outcomes" }
+      },
+      {
+        "heading": "Learnings",
+        "body": "Iterating constantly to refine requirements and workflows allowed me to vibe-code my own custom app once it became feasible using AI tools."
+      }
+    ]
+  },
+  {
+    "slug": "ai-native-design-execution",
+    "title": "AI Native Design Execution",
+    "summary": "Use AI to improve design execution workflow by 208%",
+    "cover": "/portfolio/images/ai-native-design-execution-cover.webp",
+    "sections": [
+      {
+        "heading": "Context",
+        "body": "Being at the front of the design and development industry is an expectation of our clients at Lab49. Redefining the design processes enables us to lead our customers into the AI native future.",
+        "image": { "src": "/portfolio/images/ai-native-design-execution-1.webp", "caption": "AI adoption initiative" }
+      },
+      {
+        "heading": "Problem Statement",
+        "body": "How to create an AI native design workflow?",
+        "image": { "src": "/portfolio/images/ai-native-design-execution-2.webp", "caption": "Design execution workflow", "captionAlign": "center" }
+      },
+      {
+        "heading": "Goals",
+        "body": "Improve design delivery quality and documentation. Decrease time to first prototype and iterations. Increase cross-functional team communication. Integrate AI into design workflow resourcefully."
+      },
+      {
+        "heading": "Hypothesis",
+        "body": "Following the lead of software development, solving for design execution will allow design to engage more in the product development lifecycle as a strategic partner.",
+        "image": { "src": "/portfolio/images/ai-native-design-execution-3.webp", "caption": "Proposed AI native design workflow", "captionAlign": "center" }
+      },
+      {
+        "heading": "Actions",
+        "body": "Created proof of concepts for end-to-end design execution. Developed a design system based UI kit. Experimented with AI agents to hand-off subprocesses.",
+        "image": { "src": "/portfolio/images/ai-native-design-execution-4.webp", "caption": "Static Figma assets", "captionAlign": "left" },
+        "images": [
+          { "src": "/portfolio/images/ai-native-design-execution-5.webp", "caption": "Workflow in progress", "captionAlign": "left" },
+          { "src": "/portfolio/images/ai-native-design-execution-6.webp", "caption": "Proof of concept output to Figma", "captionAlign": "center" },
+          { "src": "/portfolio/images/ai-native-design-execution-7.webp", "caption": "Figma design vs AI output from prototype", "captionAlign": "center" },
+          { "src": "/portfolio/images/ai-native-design-execution-8.webp", "caption": "Bitbucket repo structure", "captionAlign": "center" },
+          { "src": "/portfolio/images/ai-native-design-execution-9.webp", "caption": "AI design agents", "captionAlign": "center" },
+          { "src": "/portfolio/images/ai-native-design-execution-10.webp", "caption": "Interest and adoption", "captionAlign": "center" },
+          { "src": "/portfolio/images/ai-native-design-execution-11.webp", "caption": "Proof of concept showcase", "captionAlign": "center" }
+        ]
+      },
+      {
+        "heading": "Outcome",
+        "body": "3.5x faster design prototyping and showcasing. Reduced time spent on design documentation by 67%. Simplified decision making and task oriented communication. Standardized design process and improved quality.",
+        "image": { "src": "/portfolio/images/ai-native-design-execution-12.webp", "caption": "Estimation of efficiency gains and snapshot of rollout", "captionAlign": "center" },
+        "images": [
+          { "src": "/portfolio/images/ai-native-design-execution-13.webp", "caption": "Summary of outcomes", "captionAlign": "left" }
+        ]
+      },
+      {
+        "heading": "Learnings",
+        "body": "Developing better design processes that use AI tools enables new possibilities to deliver design impact at every step of the process."
+      }
+    ]
+  },
+  {
+    "slug": "competency-mapping-for-designers",
+    "title": "Competency Mapping for Designers",
+    "summary": "Enable individually targeted competency up-skilling",
+    "cover": "/portfolio/images/competency-mapping-for-designers-cover.webp",
+    "sections": [
+      {
+        "heading": "Context",
+        "body": "The company's expectations of designers' competencies were opaque to the team. The design team struggled to decipher career paths and work needed to get promoted.",
+        "image": { "src": "/portfolio/images/competency-mapping-for-designers-1.webp", "caption": "Snapshot of competency mapping" }
+      },
+      {
+        "heading": "Problem Statement",
+        "body": "How to develop subject matter experts who also have strong craft skills in design teams?",
+        "image": { "src": "/portfolio/images/competency-mapping-for-designers-2.webp", "caption": "Expectations" }
+      },
+      {
+        "heading": "Goals",
+        "body": "Discover team competency strengths and areas of improvement. Gain understanding of team competency composition. Consolidate competency proficiency. Support individual up-skilling and becoming subject matter experts."
+      },
+      {
+        "heading": "Hypothesis",
+        "body": "Matching designers' interest and skill set to development goals will help build both a happier team and reliable subject matter experts."
+      },
+      {
+        "heading": "Actions",
+        "body": "Coordinated and organized team to workshops to baseline expectations. Map out relevant skills to be tracked. Plan and execute on input gathering. Visualize the input. Explore learning material and support up-skilling.",
+        "image": { "src": "/portfolio/images/competency-mapping-for-designers-3.webp", "caption": "Communication between leadership and team", "captionAlign": "center" },
+        "images": [
+          { "src": "/portfolio/images/competency-mapping-for-designers-4.webp", "caption": "Information gathering", "captionAlign": "center" },
+          { "src": "/portfolio/images/competency-mapping-for-designers-5.webp", "caption": "Workshop output" },
+          { "src": "/portfolio/images/competency-mapping-for-designers-6.webp", "caption": "Documentation", "captionAlign": "center" },
+          { "src": "/portfolio/images/competency-mapping-for-designers-7.webp", "caption": "Path to up-skill", "captionAlign": "center" },
+          { "src": "/portfolio/images/competency-mapping-for-designers-8.webp", "caption": "Progress", "captionAlign": "center" },
+          { "src": "/portfolio/images/competency-mapping-for-designers-9.webp", "caption": "Skills questionnaire", "captionAlign": "center" },
+          { "src": "/portfolio/images/competency-mapping-for-designers-10.webp", "caption": "Radar chart of results", "captionAlign": "center" },
+          { "src": "/portfolio/images/competency-mapping-for-designers-11.webp", "caption": "Profiles", "captionAlign": "center" },
+          { "src": "/portfolio/images/competency-mapping-for-designers-12.webp", "caption": "Level average vs individual comparison", "captionAlign": "center" },
+          { "src": "/portfolio/images/competency-mapping-for-designers-13.webp", "caption": "Removing personal bias", "captionAlign": "center" },
+          { "src": "/portfolio/images/competency-mapping-for-designers-14.webp", "caption": "Self, peer and manager ratings of skill", "captionAlign": "center" },
+          { "src": "/portfolio/images/competency-mapping-for-designers-15.webp", "caption": "Hosting knowledge sharing sessions", "captionAlign": "center" }
+        ]
+      },
+      {
+        "heading": "Outcome",
+        "body": "Developed a workflow to capture and visualize competencies individually and by groups. Transparently discuss competency mapping outcome with team members. Support, coach and mentor designers on their specific learning goals.",
+        "image": { "src": "/portfolio/images/competency-mapping-for-designers-16.webp", "caption": "Summary of outcomes" }
+      },
+      {
+        "heading": "Learnings",
+        "body": "Transparency in expectations and confidence in competencies was valued by the team and supported by the organization."
+      }
+    ]
+  }
+]
